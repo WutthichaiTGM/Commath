@@ -18,6 +18,13 @@
 		.form-color {
 			color: black;
 		}
+
+		.center {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 50%;
+		}
 	</style>
 </head>
 
@@ -28,28 +35,38 @@
 				<div class="container">
 					<div class="navbar-header">
 						<div class="navbar-brand">
-							<a href="#">
-								<h1><span>linear </span>equations</h1>
+							<a href="/">
+								<h1><span>Computational</span>Mathematics</h1>
 							</a>
 						</div>
 					</div>
-
+					<br>
 					<div class="navbar-collapse collapse">
-						<div class="menu">
-							<ul class="nav nav-tabs" role="tablist">
-								<li role="presentation"><a href="/" class="active">หน้าหลัก</a></li>
-								<li role="presentation"><a href="/32bit">แปลงเลขทศนิยมเป็น IEEE 32bit</a></li>
-								<li role="presentation"><a href="/64bit">แปลงเลขทศนิยมเป็น IEEE 64bit</a></li>
-								<li role="presentation"><a href="/AxBs">แก้ระบบสมการเชิงเส้น SAX = BS</a></li>
-							</ul>
-						</div>
+						<center>
+							<div class="menu container">
+								<br>
+								<button class="btn btn-success" onclick="window.location.href = '/';">หน้าหลัก</button>
+								<button class="btn btn-success"
+									onclick="window.location.href = '/32bit';">แปลงเลขทศนิยมเป็น EEE 32bit</button>
+								<button class="btn btn-success"
+									onclick="window.location.href = '/64bit';">แปลงเลขทศนิยมเป็น EEE 64bit</button>
+								<button class="btn btn-success"
+									onclick="window.location.href = '/AxBs';">แก้ระบบสมการเชิงเส้น SAX = BS</button>
+								<button class="btn btn-success"
+									onclick="window.location.href = '/Differentiation';">Differentiation</button>
+								<button class="btn btn-success"
+									onclick="window.location.href = '/Integration';">Integration</button>
+								<button class="btn btn-success"
+									onclick="window.location.href = '/Rootfinding';">Rootfinding</button>
+							</div>
+						</center>
 					</div>
 				</div>
 			</div>
 		</nav>
 	</header>
-    {% block content %}
-    {% endblock  %}
+	{% block content %}
+	{% endblock  %}
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="{% static 'myapp/js/jquery-2.1.1.min.js' %}"></script>
 	<script src="{% static 'myapp/js/bootstrap.min.js' %}"></script>
